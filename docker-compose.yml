@@ -1,6 +1,5 @@
 version: '3.8'
 
-# Setting up the PostgreSQL DB Container
 services:
   server:
     build:

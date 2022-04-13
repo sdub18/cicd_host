@@ -6,9 +6,7 @@ COPY requirements.txt requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /test/requirements.txt
 
-COPY startup.sh .
-
 COPY ./app /test/app
 
 # Run alembic configuration
-CMD ["./startup.sh"]
+CMD uvicorn app.main:app --host 0.0.0.0 --port 8000
