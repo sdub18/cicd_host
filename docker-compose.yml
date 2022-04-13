@@ -1,0 +1,10 @@
+version: '3.8'
+
+# Setting up the PostgreSQL DB Container
+services:
+  server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
